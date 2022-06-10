@@ -18,7 +18,7 @@ cask "codelite-official" do
   end
 
   app "codelite.app"
-
+  depends_on formula: ["libssh", "hunspell"]
   zap trash: [
     "~/Library/Application Support/codelite",
     "~/Library/Preferences/codelite.plist",
