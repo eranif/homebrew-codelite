@@ -1,26 +1,29 @@
 cask "codelite-official" do
-  version "16.1.0"
-  sha256 "a88776994d7dbb93b19576ae98088b2f828481fc948366d821a6a3124c062d46"
-  
-  url "https://downloads.codelite.org/codelite/#{version}/codelite.app.tar.gz"
-  name "CodeLite"
-  desc "IDE for C, C++, Rust, Python, PHP and Node.js"
-  homepage "https://codelite.org/"
 
-  livecheck do
-    url "https://downloads.codelite.org/"
-    strategy :page_match do |page|
-      match = page.match(/CodeLite\s*(\d+\.\d+)((?:\.\d+)*)\s*-\s*Stable\s*Release/i)
-      next if match.blank?
+    name "CodeLite"
+    desc "IDE for C, C++, Rust, Python, PHP and Node.js"
+    version "16.2.0"
 
-      "#{match[1]}#{match[2].presence || ".0"}"
+    if Hardware::CPU.intel?
+        filename "codelite-arm64.app.tgz"
+        sha256 "a88776994d7dbb93b19576ae98088b2f828481fc948366d821a6a3124c062d46"
+    else
+        filename "codelite-x86_64.app.tgz"
+        sha256 "a88776994d7dbb93b19576ae98088b2f828481fc948366d821a6a3124c062d46"
     end
-  end
+    url "https://downloads.codelite.org/codelite/#{version}/#{filename}"
 
-  app "codelite.app"
-  depends_on formula: ["libssh", "hunspell"]
-  zap trash: [
-    "~/Library/Application Support/codelite",
-    "~/Library/Preferences/codelite.plist",
-  ]
+    homepage "https://codelite.org/"
+    app "codelite.app"
+    depends_on formula: [
+        "libssh",
+        "hunspell",
+        "llvm" # for lldb-vscode, clangd
+    ]
+    depends_on macos: ">= :monterey"
+
+    zap trash: [
+        "~/Library/Application Support/codelite",
+        "~/Library/Preferences/codelite.plist",
+    ]
 end
