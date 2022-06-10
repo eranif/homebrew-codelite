@@ -4,7 +4,7 @@ cask "codelite-official" do
   
   url "https://downloads.codelite.org/codelite/#{version}/codelite.app.tar.gz"
   name "CodeLite"
-  desc "IDE for C, C++, PHP and Node.js"
+  desc "IDE for C, C++, Rust, Python, PHP and Node.js"
   homepage "https://codelite.org/"
 
   livecheck do
@@ -16,11 +16,6 @@ cask "codelite-official" do
       "#{match[1]}#{match[2].presence || ".0"}"
     end
   end
-  
-  depends_on formula: [
-    :libssh,
-    :hunspell,
-  ]
 
   app "codelite.app"
 
