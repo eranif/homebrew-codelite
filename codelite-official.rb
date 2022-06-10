@@ -1,7 +1,7 @@
-cask "codelite" do
+cask "codelite-official" do
   version "16.1.0"
   sha256 no_check
-
+  
   url "https://downloads.codelite.org/codelite/#{version}/codelite.app.tar.gz"
   name "CodeLite"
   desc "IDE for C, C++, PHP and Node.js"
