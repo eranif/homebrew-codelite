@@ -1,6 +1,6 @@
 cask "codelite-official" do
   version "16.1.0"
-  sha256 "359836b30ad157936d3da0b19d79b0f33561019a"
+  sha256 "a88776994d7dbb93b19576ae98088b2f828481fc948366d821a6a3124c062d46"
   
   url "https://downloads.codelite.org/codelite/#{version}/codelite.app.tar.gz"
   name "CodeLite"
