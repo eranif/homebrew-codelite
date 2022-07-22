@@ -6,9 +6,9 @@ cask "codelite-official" do
     sha256 :no_check
 
     if Hardware::CPU.intel?
-        filename "codelite-arm64.app.tgz"
+        filename "codelite-arm64.app.tar.gz"
     else
-        filename "codelite-x86_64.app.tgz"
+        filename "codelite-x86_64.app.tar.gz"
     end
     url "https://downloads.codelite.org/codelite/#{version}/#{filename}"
 
