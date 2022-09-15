@@ -16,7 +16,7 @@ cask "codelite-official" do
     homepage "https://codelite.org/"
     app "codelite.app"
     depends_on formula: [
-        "codelite-libssh",
+        "libssh096",
         "hunspell",
         "llvm" # for lldb-vscode, clangd
     ]
