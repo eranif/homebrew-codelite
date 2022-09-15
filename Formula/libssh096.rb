@@ -1,4 +1,4 @@
-class libssh096 < Formula
+class Libssh096 < Formula
   desc "C library SSHv1/SSHv2 client and server protocols"
   homepage "https://www.libssh.org/"
   url "https://www.libssh.org/files/0.9/libssh-0.9.6.tar.xz"
