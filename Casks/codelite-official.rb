@@ -24,6 +24,13 @@ cask "codelite-official" do
     ]
     depends_on macos: ">= :monterey"
 
+
+    postflight do
+        system_command "/usr/bin/xattr",
+                        args: ["-c", "/Application/codelite.app"],
+                        sudo: false
+    end
+
     zap trash: [
         "~/Library/Application Support/codelite",
         "~/Library/Preferences/codelite.plist",
