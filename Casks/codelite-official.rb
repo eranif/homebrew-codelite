@@ -2,15 +2,15 @@ cask "codelite-official" do
 
     name "CodeLite"
     desc "IDE for C, C++, Rust, Python, PHP and Node.js"
-    version "16.2.0"
+    version "16.3.0"
     filename = "codelite-arm64.app.tar.gz"
 
     if Hardware::CPU.intel?
         url "https://downloads.codelite.org/codelite/#{version}/codelite-x86_64.app.tar.gz"
-        sha256 "87e840405cb19ff94d734822e0fc7726f97e4ec18b59393a6eff469c6fff1ace"
+        sha256 "45c88607368161a50583b7914b21525d5aab9aff29c7dec59cc6d2d36779ac4b"
     else
         url "https://downloads.codelite.org/codelite/#{version}/codelite-arm64.app.tar.gz"
-        sha256 "2a8e51fef0b11f387b38db7103f4b742547ebb9cdc8e2f921a3f13936091108e"
+        sha256 "ddb63bd26468d01f7bac030850ea4f2735630ff50b66a9b8d355a2c10afcc95e"
     end
 
     homepage "https://codelite.org/"
