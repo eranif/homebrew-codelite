@@ -27,7 +27,7 @@ cask "codelite-official" do
 
     postflight do
         system_command "/usr/bin/xattr",
-                        args: ["-c", "/Application/codelite.app"],
+                        args: ["-cr", "#{appdir}/codelite.app"],
                         sudo: false
     end
 
