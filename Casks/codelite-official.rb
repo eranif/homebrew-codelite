@@ -20,7 +20,8 @@ cask "codelite-official" do
     depends_on formula: [
         "libssh096",
         "hunspell",
-        "llvm" # for lldb-vscode, clangd
+        "llvm", # for lldb-vscode, clangd
+        "clang-format"	
     ]
     depends_on macos: ">= :monterey"
 
