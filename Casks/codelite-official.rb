@@ -4,10 +4,10 @@ cask "codelite-official" do
     desc "IDE for C, C++, Rust, Python, PHP and Node.js"
 
     if Hardware::CPU.intel?
-        version "16.6.0"
+        version "16.7.0"
         filename = "codelite-x86_64.app.tar.gz"
         url "https://downloads.codelite.org/codelite/#{version}/codelite-x86_64.app.tar.gz"
-        sha256 "7a3ca2bcf6adda218b414dcf0a95dc6859b8fbd6666ddccc490665504beda12c"
+        sha256 "3d9f57ce620bbc39f23a9e49123f1a34425b39eea563ff3a47e3b5bf3e408f59"
     else
         version "16.7.0"
         filename = "codelite-arm64.app.tar.gz"
