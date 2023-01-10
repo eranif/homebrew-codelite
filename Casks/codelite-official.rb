@@ -12,7 +12,7 @@ cask "codelite-official" do
         version "17.0.0"
         filename = "codelite-arm64.app.tar.gz"
         url "https://downloads.codelite.org/codelite/#{version}/codelite-arm64.app.tar.gz"
-        sha256 "980557c3e19e0eb6c1e71101cd844a1311d6fd4912a3c67438361da2f7b95def"
+        sha256 "61e3cdfdbaa290feb9e35eab31375b1cb9af0ba1f7e4d33198fd9e293f636b5c"
     end
 
     homepage "https://codelite.org/"
