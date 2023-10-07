@@ -14,7 +14,7 @@ cask "codelite-official" do
         filename = "codelite-macOS_14.0-arm64.app.tar.gz"
         url "https://downloads.codelite.org/codelite/#{version}/codelite-macOS_14.0-arm64.app.tar.gz"
         sha256 "ae10390058a7fe3e82a89fcc4aa1a648e77dd15be76970d9ea6797e54ea38db1"
-    	depends_on macos: ":sonoma"
+    	depends_on macos: :sonoma
     end
 
     homepage "https://codelite.org/"
