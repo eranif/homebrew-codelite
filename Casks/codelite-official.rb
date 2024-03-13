@@ -11,8 +11,8 @@ cask "codelite-official" do
     	depends_on macos: ">= :monterey"
     else
         version "17.9.0"
-        filename = "codelite-macOS_14.0-arm64.app.tar.gz"
-        url "https://downloads.codelite.org/codelite/#{version}/codelite-macOS_14.0-arm64.app.tar.gz"
+        filename = "codelite-macOS_14.2.1-arm64.app.tar.gz"
+        url "https://downloads.codelite.org/codelite/#{version}/#{filename}"
         sha256 "503b70c3e24d6f6be35a5b42bfee24f16fd7c6b7fb4e274045f2f41ef8929c89"
     	depends_on macos: :sonoma
     end
