@@ -10,10 +10,10 @@ cask "codelite-official" do
         sha256 "e13755ab8edbc6e213269d73b206935c102d5b8ae2c0b3da24ae0a87cab22f57"
     	depends_on macos: ">= :monterey"
     else
-        version "17.12.0"
-        filename = "codelite-macOS_14.7-arm64.app.tar.gz"
+        version "18.0.0"
+        filename = "codelite-macOS_14.7.2-arm64.app.tar.gz"
         url "https://downloads.codelite.org/codelite/#{version}/#{filename}"
-        sha256 "e69aef5806d54c515ee54acc070e7e20d58847e806feb10267434af097eba229"
+        sha256 "ebaa1649142033bbb7eeff2c2e4f2dab9deefd61c0304dfe4aa9c36012cf7dc6"
     	depends_on macos: ">= :sonoma"
     end
 
@@ -21,7 +21,7 @@ cask "codelite-official" do
     app "codelite.app"
     depends_on formula: [
         "llvm", # for lldb-vscode, clangd
-        "clang-format"	
+        "clang-format"
     ]
 
     postflight do
