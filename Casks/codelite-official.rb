@@ -10,10 +10,10 @@ cask "codelite-official" do
         sha256 "e13755ab8edbc6e213269d73b206935c102d5b8ae2c0b3da24ae0a87cab22f57"
         depends_on macos: ">= :monterey"
     else
-        version "18.3.0"
-        filename = "codelite-macOS_26.1-arm64.app.tar.gz"
+        version "18.4.0"
+        filename = "codelite-macOS_26.4.1-arm64.app.tar.gz"
         url "https://downloads.codelite.org/codelite/#{version}/#{filename}"
-        sha256 "81c6ec0e705aa936cabffb564d546b6fdf20cf6605a3dd9667270e58543584b9"
+        sha256 "395e227230446d8274767ef274f67a7ca087da2af1b61366b0548259b7949a11"
         depends_on macos: ">= :tahoe"
     end
 
